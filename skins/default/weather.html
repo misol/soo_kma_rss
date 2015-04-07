@@ -1,0 +1,38 @@
+<h2>내일 날씨(발표 시간: {date('m/d H:i',$datas->pubtime)})</h2>
+<h3>오전 9시</h3>
+평균 기온: {$datas->tomorrow[9]->temp->body}°C<br />
+최고 기온: {$datas->tomorrow[9]->tmx->body}°C<br />
+최저 기온: {$datas->tomorrow[9]->tmn->body}°C<br />
+하늘 상태: {$lang->sky_lang[$datas->tomorrow[9]->sky->body]}<br />
+강수 상태: {$lang->rain_lang[$datas->tomorrow[9]->pty->body]}<br />
+강수 확률: {$datas->tomorrow[9]->pop->body}%<br />
+습도: {$datas->tomorrow[9]->reh->body}%
+
+<h3>정오</h3>
+평균 기온: {$datas->tomorrow[12]->temp->body}°C<br />
+최고 기온: {$datas->tomorrow[12]->tmx->body}°C<br />
+최저 기온: {$datas->tomorrow[12]->tmn->body}°C<br />
+하늘 상태: {$lang->sky_lang[$datas->tomorrow[12]->sky->body]}<br />
+강수 상태: {$lang->rain_lang[$datas->tomorrow[12]->pty->body]}<br />
+강수 확률: {$datas->tomorrow[12]->pop->body}%<br />
+습도: {$datas->tomorrow[12]->reh->body}%
+
+<h3>오후 6시</h3>
+평균 기온: {$datas->tomorrow[18]->temp->body}°C<br />
+최고 기온: {$datas->tomorrow[18]->tmx->body}°C<br />
+최저 기온: {$datas->tomorrow[18]->tmn->body}°C<br />
+하늘 상태: {$lang->sky_lang[$datas->tomorrow[18]->sky->body]}<br />
+강수 상태: {$lang->rain_lang[$datas->tomorrow[18]->pty->body]}<br />
+강수 확률: {$datas->tomorrow[18]->pop->body}%<br />
+습도: {$datas->tomorrow[18]->reh->body}%
+
+<h3>자정</h3>
+평균 기온: {$datas->tomorrow[24]->temp->body}°C<br />
+최고 기온: {$datas->tomorrow[24]->tmx->body}°C<br />
+최저 기온: {$datas->tomorrow[24]->tmn->body}°C<br />
+하늘 상태: {$lang->sky_lang[$datas->tomorrow[24]->sky->body]}<br />
+강수 상태: {$lang->rain_lang[$datas->tomorrow[24]->pty->body]}<br />
+강수 확률: {$datas->tomorrow[24]->pop->body}%<br />
+습도: {$datas->tomorrow[24]->reh->body}%
+<a href="{$datas->link}">자세히</a>
+<address>출처: 기상청</address>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="sky_lang" type="array">
+		<item name="1">
+			<value xml:lang="ko"><![CDATA[맑음]]></value>
+			<value xml:lang="en"><![CDATA[Clear]]></value>
+		</item>
+		<item name="2">
+			<value xml:lang="ko"><![CDATA[구름 조금]]></value>
+			<value xml:lang="en"><![CDATA[Partly Cloudy]]></value>
+		</item>
+		<item name="3">
+			<value xml:lang="ko"><![CDATA[구름 많음]]></value>
+			<value xml:lang="en"><![CDATA[Mostly Cloudy]]></value>
+		</item>
+		<item name="4">
+			<value xml:lang="ko"><![CDATA[흐림]]></value>
+			<value xml:lang="en"><![CDATA[Cloudy]]></value>
+		</item>
+	</item>
+	<item name="rain_lang" type="array">
+		<item name="0">
+			<value xml:lang="ko"><![CDATA[없음]]></value>
+			<value xml:lang="en"><![CDATA[None]]></value>
+		</item>
+		<item name="1">
+			<value xml:lang="ko"><![CDATA[비]]></value>
+			<value xml:lang="en"><![CDATA[Rain]]></value>
+		</item>
+		<item name="2">
+			<value xml:lang="ko"><![CDATA[비/눈]]></value>
+			<value xml:lang="en"><![CDATA[Rain/Snow]]></value>
+		</item>
+		<item name="3">
+			<value xml:lang="ko"><![CDATA[눈/비]]></value>
+			<value xml:lang="en"><![CDATA[Snow/Rain]]></value>
+		</item>
+		<item name="4">
+			<value xml:lang="ko"><![CDATA[눈]]></value>
+			<value xml:lang="en"><![CDATA[Snow]]></value>
+		</item>
+	</item>
+</lang>
