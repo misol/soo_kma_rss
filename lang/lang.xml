@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <lang>
+	<item name="soo_probabilities">
+		<value xml:lang="ko"><![CDATA[확률]]></value>
+		<value xml:lang="en"><![CDATA[Probabilities]]></value>
+	</item>
+	<item name="soo_temperature">
+		<value xml:lang="ko"><![CDATA[온도]]></value>
+		<value xml:lang="en"><![CDATA[Temperature]]></value>
+	</item>
+	<item name="soo_humidity">
+		<value xml:lang="ko"><![CDATA[습도]]></value>
+		<value xml:lang="en"><![CDATA[Humidity]]></value>
+	</item>
+	<item name="soo_p_rain">
+		<value xml:lang="ko"><![CDATA[강수확률]]></value>
+		<value xml:lang="en"><![CDATA[Rainfall probability]]></value>
+	</item>
 	<item name="sky_lang" type="array">
 		<item name="1">
 			<value xml:lang="ko"><![CDATA[맑음]]></value>
