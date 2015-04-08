@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget version="0.2">
 	<title xml:lang="ko">한국 날씨 위젯</title>
+	<title xml:lang="en">Korean Weather Widget</title>
 	<description xml:lang="ko">기상청의 날씨 RSS를 읽어옵니다.</description>
+	<description xml:lang="en">Read weather RSS of KMA.</description>
 	<version>0.1</version>
 	<date>2015-04-09</date>
 	<author email_address="misol.kr@gmail.com" link="https://github.com/misol">
