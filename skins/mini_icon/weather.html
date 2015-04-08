@@ -1,4 +1,9 @@
-<link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
+<!--@if(version_compare(__XE_VERSION__, '1.8.0', '<'))-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
+<!--@else-->
+	<load target="./../../../../common/xeicon/xeicon.min.css" />
+<!--@end-->
+
 <!--%import("css/css.css")-->
 <h3 class="soo_weather"><i class="xi-sunset"></i> {$location} {$lang->soo_tomorrow}({intval(date('m',$datas->pubtime))}/{intval(date('d',$datas->pubtime))+1}) {$lang->soo_weather} <a href="{$datas->link}" onclick="window.open(this.href);return false">{$lang->detail_view}</a></h3>
 {@$time_arr = array(6,9,12,15,18,21,24)}
