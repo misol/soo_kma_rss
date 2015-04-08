@@ -32,8 +32,7 @@ class soo_kma_rss extends WidgetHandler
 	}
 
 	/**
-	 * @brief function to receive contents from rss url
-	 * For Tistory blog in Korea, the original RSS url has location header without contents. Fixed to work as same as rss_reader widget.
+	 * @brief function to read contents from web as weather rss url
 	 */
 	function requestFeedContents($rss_url)
 	{
@@ -42,8 +41,7 @@ class soo_kma_rss extends WidgetHandler
 	}
 
 	/**
-	 * @brief function to receive contents from rss url
-	 * For Tistory blog in Korea, the original RSS url has location header without contents. Fixed to work as same as rss_reader widget.
+	 * @brief function to read cache contents with weather rss url
 	 */
 	private function getCacheContents($rss_url)
 	{
@@ -65,8 +63,7 @@ class soo_kma_rss extends WidgetHandler
 	}
 
 	/**
-	 * @brief function to receive contents from rss url
-	 * For Tistory blog in Korea, the original RSS url has location header without contents. Fixed to work as same as rss_reader widget.
+	 * @brief function to write contents to cache with weather rss url
 	 */
 	private function writeCacheContents($rss_url, $xml_doc)
 	{
