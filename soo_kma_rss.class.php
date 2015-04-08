@@ -41,17 +41,60 @@ class soo_kma_rss extends WidgetHandler
 		return FileHandler::getRemoteResource($rss_url, null, 3, 'GET', 'application/xml');
 	}
 
+	/**
+	 * @brief function to receive contents from rss url
+	 * For Tistory blog in Korea, the original RSS url has location header without contents. Fixed to work as same as rss_reader widget.
+	 */
+	private function getCacheContents($rss_url)
+	{
+		$filename = sprintf('./files/cache/widget/soo_kma_rss/xml_php/%s.php', md5(trim($rss_url)));
+		$filename = FileHandler::getRealPath($filename);
+		$output = FileHandler::readFile($filename);
+
+		if(is_readable($filename) && (filemtime($filename) > strtotime('-30 minutes')))
+		{
+			if(isset($output))
+			{
+				$output = trim(str_replace(array('<?php exit(); /**','SOO_END **/'),array('',''),$output));
+				$output = unserialize($output);
+				return $output;
+			}
+		}
+
+		return NULL;
+	}
+
+	/**
+	 * @brief function to receive contents from rss url
+	 * For Tistory blog in Korea, the original RSS url has location header without contents. Fixed to work as same as rss_reader widget.
+	 */
+	private function writeCacheContents($rss_url, $xml_doc)
+	{
+		$filename = sprintf('./files/cache/widget/soo_kma_rss/xml_php/%s.php', md5(trim($rss_url)));
+		$filename = FileHandler::getRealPath($filename);
+
+		$buff = '<?php exit(); /**' . serialize($xml_doc) . 'SOO_END **/';
+		FileHandler::writeFile($filename, $buff);
+		return TRUE;
+	}
+
 	function _getRssItems($args)
 	{
-		$buff = $this->requestFeedContents($args->rss_url);
+		$args->rss_url = trim($args->rss_url);
+		$xml_doc = $this->getCacheContents($args->rss_url);
+		if(!isset($xml_doc))
+		{
+			$buff = $this->requestFeedContents($args->rss_url);
 
-		$encoding = preg_match("/<\?xml.*encoding=\"(.+)\".*\?>/i", $buff, $matches);
-		if($encoding && stripos($matches[1], "UTF-8") === FALSE) $buff = Context::convertEncodingStr($buff);
+			$encoding = preg_match("/<\?xml.*encoding=\"(.+)\".*\?>/i", $buff, $matches);
+			if($encoding && stripos($matches[1], "UTF-8") === FALSE) $buff = Context::convertEncodingStr($buff);
 
-		$buff = str_replace('body>','wbody>',preg_replace("/<\?xml.*\?>/i", "", $buff));
+			$buff = str_replace('body>','wbody>',preg_replace("/<\?xml.*\?>/i", "", $buff));
 
-		$oXmlParser = new XmlParser();
-		$xml_doc = $oXmlParser->parse($buff);
+			$oXmlParser = new XmlParser();
+			$xml_doc = $oXmlParser->parse($buff);
+			$this->writeCacheContents($args->rss_url, $xml_doc);
+		}
 
 		$item = $xml_doc->rss->channel->item;
 
