@@ -4,7 +4,7 @@ div.soo_weather_mini,ol.soo_weather_mini, ol.soo_weather_mini>li
 	margin:0;
 	padding:0;
 	position:relative;
-	height:175px;
+	height:166px;
 }
 ol.soo_weather_mini ul, ol.soo_weather_mini li
 {
@@ -21,13 +21,21 @@ ol.soo_weather_mini>li>ul>li,ol.soo_weather_mini>li>ul>li.soo_weather_mini_icon>
 ol.soo_weather_mini>li
 {
 	width:14.285%;
-	font-size:80px;
+	box-sizing: border-box;
 	text-align: center;
 	float:left;
 	overflow:hidden;
 	margin-left:-1px;
 	border-left: solid 1px #eeeeee;
 	color:#616161;
+}
+ol.soo_weather_mini>li>ul>li.soo_weather_mini_icon
+{
+	font-size:70px;
+	line-height:90px;
+	height:86px;
+	overflow:hidden;
+	box-sizing: border-box;
 }
 ol.soo_weather_mini>li:first-child
 {
@@ -38,7 +46,10 @@ ol.soo_weather_mini>li>ul>li.text
 {
 	display:block;
 	font-size:11px;
-	padding:2px 0;
+	line-height:14px;
+	padding:3px 0;
+	box-sizing: border-box;
+	height:20px;
 }
 ol.soo_weather_mini>li  .soo_text_hide
 {
@@ -67,16 +78,44 @@ ol.soo_weather_mini:after
 	font-style:normal;
 }
 @media screen and (max-width: 600px) {
+	ol.soo_weather_mini>li>ul>li.text
+	{
+		font-size:10px;
+		line-height:14px;
+		height:20px;
+	}
 	div.soo_weather_mini,ol.soo_weather_mini, ol.soo_weather_mini>li
 	{
 		height:140px;
 	}
-	ol.soo_weather_mini>li
+	ol.soo_weather_mini>li li.soo_weather_mini_icon
 	{
-		font-size:40px;
+		font-size:45px;
+		line-height:50px;
+		margin:0px;
+		height:60px;
+		overflow:hidden;
+		padding:5px 0;
 	}
+}
+@media screen and (max-width: 400px) {
 	ol.soo_weather_mini>li>ul>li.text
 	{
-		font-size:10px;
+		font-size:9px;
+		line-height:14px;
+		height:20px;
+	}
+	div.soo_weather_mini,ol.soo_weather_mini, ol.soo_weather_mini>li
+	{
+		height:120px;
+	}
+	ol.soo_weather_mini>li li.soo_weather_mini_icon
+	{
+		font-size:30px;
+		line-height:34px;
+		margin:0px;
+		height:40px;
+		overflow:hidden;
+		padding:3px 0;
 	}
 }

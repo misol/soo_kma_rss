@@ -10,10 +10,10 @@
 				<li class="soo_weather_mini_icon">
 				<block cond="$datas->tomorrow[$time]->pty->body == 0">
 					<block cond="$datas->tomorrow[$time]->sky->body == 1">
-						<i class="xi-sun" title="{$lang->sky_lang[1]}"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
+						<i class="xi-sun" title="{$lang->sky_lang[1]}" cond="$time < 20"></i><i class="xi-night" title="{$lang->sky_lang[1]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
 					</block>
 					<block cond="$datas->tomorrow[$time]->sky->body == 2">
-						<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
+						<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}" cond="$time < 20"></i><i class="xi-cloudy-night" title="{$lang->sky_lang[2]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
 					</block>
 					<block cond="$datas->tomorrow[$time]->sky->body == 3">
 						<i class="xi-cloudy" title="{$lang->sky_lang[3]}"></i><span class="soo_text_hide">{$lang->sky_lang[3]}</span>
