@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
 <!--%import("css/css.css")-->
 <h3 class="soo_weather"><i class="xi-sunset"></i> {$location} {$lang->soo_tomorrow}({intval(date('m',$datas->pubtime))}/{intval(date('d',$datas->pubtime))+1}) {$lang->soo_weather} <a href="{$datas->link}" onclick="window.open(this.href);return false">{$lang->detail_view}</a></h3>
-{@$time_arr = array(6,9,12,15,18,21,24)}
+{@$time_arr = array(9,12,18,21)}<!--// 3, 6, 9, 12, 18, 21, 24 시 정보를 불러올 수 있음. -->
 <div class="soo_weather_mini">
 	<ol class="soo_weather_mini">
 		<li loop="$time_arr=>$key,$time">

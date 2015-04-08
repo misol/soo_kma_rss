@@ -60,4 +60,24 @@
 			<value xml:lang="en"><![CDATA[Snow]]></value>
 		</item>
 	</item>
+	<item name="soo_copyright">
+		<value xml:lang="ko"><![CDATA[날씨 정보 저작권자]]></value>
+		<value xml:lang="en"><![CDATA[Weather information copyright]]></value>
+	</item>
+	<item name="soo_kma">
+		<value xml:lang="ko"><![CDATA[기상청]]></value>
+		<value xml:lang="en"><![CDATA[Korea Meteorological Administration]]></value>
+	</item>
+	<item name="soo_today">
+		<value xml:lang="ko"><![CDATA[오늘]]></value>
+		<value xml:lang="en"><![CDATA[Today]]></value>
+	</item>
+	<item name="soo_tomorrow">
+		<value xml:lang="ko"><![CDATA[내일]]></value>
+		<value xml:lang="en"><![CDATA[Tomorrow]]></value>
+	</item>
+	<item name="soo_weather">
+		<value xml:lang="ko"><![CDATA[날씨]]></value>
+		<value xml:lang="en"><![CDATA[Weather]]></value>
+	</item>
 </lang>
