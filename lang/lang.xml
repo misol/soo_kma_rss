@@ -16,6 +16,10 @@
 		<value xml:lang="ko"><![CDATA[강수확률]]></value>
 		<value xml:lang="en"><![CDATA[Rainfall probability]]></value>
 	</item>
+	<item name="soo_pubtime">
+		<value xml:lang="ko"><![CDATA[발표시간]]></value>
+		<value xml:lang="en"><![CDATA[Publishing time]]></value>
+	</item>
 	<item name="sky_lang" type="array">
 		<item name="1">
 			<value xml:lang="ko"><![CDATA[맑음]]></value>

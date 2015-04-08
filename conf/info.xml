@@ -11,6 +11,10 @@
 	<extra_vars>
 		<group>
 			<title xml:lang="ko">RSS 설정</title>
+			<var id="location" type="text">
+				<name xml:lang="ko">지역명</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소의 지역명을 입력합니다.]]></description>
+			</var>
 			<var id="rss_url" type="text">
 				<name xml:lang="ko">날씨 RSS 주소</name>
 				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://web.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.

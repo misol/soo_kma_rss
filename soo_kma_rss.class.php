@@ -92,6 +92,7 @@ class soo_kma_rss extends WidgetHandler
 	{
 		$oTemplate = &TemplateHandler::getInstance();
 
+		Context::set('location', $args->location);
 		Context::set('datas', $datas);
 
 		$tpl_path = sprintf('%sskins/%s', $this->widget_path, $args->skin);

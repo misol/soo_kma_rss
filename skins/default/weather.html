@@ -2,12 +2,12 @@
 <!--%import("css/css.css")-->
 <!--%import("js/Chart.js-1.0.2/Chart.js")-->
 <!--%import("js/js.js")-->
-<h3><i class="xi-sunset"></i>내일 날씨(발표 시간: {date('m/d H:i',$datas->pubtime)}) <a href="{$datas->link}" onclick="window.open(this.href);return false">자세히</a></h3>
+<h3 class="soo_weather"><i class="xi-sunset"></i> {$location} 내일({intval(date('m',$datas->pubtime))}/{intval(date('d',$datas->pubtime))+1}) 날씨 <a href="{$datas->link}" onclick="window.open(this.href);return false">자세히</a></h3>
 {@$time_arr = array(6,9,12,15,18,21,24)}
 <div class="soo_weather">
 	<ol class="soo_weather">
 		<li loop="$time_arr=>$key,$time">
-			<span class="soo_time">{$time}:00</span>
+			<span class="soo_time"><i class="xi-time"></i> {$time}:00</span>
 			<block cond="$datas->tomorrow[$time]->pty->body == 0">
 				<block cond="$datas->tomorrow[$time]->sky->body == 1">
 					<i class="xi-sun" title="{$lang->sky_lang[1]}"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
@@ -34,7 +34,7 @@
 		</li>
 	</ol>
 </div>
-<h3><i class="xi-umbrella"></i>{$lang->soo_p_rain}</h3>
+<h3 class="soo_weather"><i class="xi-umbrella"></i> {$lang->soo_p_rain}</h3>
 <canvas id="soo_p_rain" class="soo_graph"></canvas>
 <script>
 var p_rain_data = {
@@ -108,7 +108,7 @@ var p_rain_option = {
 
 };
 </script>
-<h3><i class="xi-warm"></i>{$lang->soo_temperature}</h3>
+<h3 class="soo_weather"><i class="xi-warm"></i> {$lang->soo_temperature}</h3>
 <canvas id="soo_temperature" class="soo_graph"></canvas>
 <script>
 var temperature_data = {
@@ -177,7 +177,7 @@ var temperature_option = {
 
 };
 </script>
-<h3><i class="xi-humidity"></i>{$lang->soo_humidity}</h3>
+<h3 class="soo_weather"><i class="xi-humidity"></i> {$lang->soo_humidity}</h3>
 <canvas id="soo_humidity" class="soo_graph"></canvas>
 <script>
 var humidity_data = {
@@ -251,4 +251,4 @@ var humidity_option = {
 
 };
 </script>
-<address>출처: <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">기상청</a></address>
+<div class="soo_weather_footer">{$lang->soo_pubtime}: {date('m/d H:i',$datas->pubtime)}, <address>출처: <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">기상청</a></address></div>
