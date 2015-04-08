@@ -29,7 +29,7 @@ ol.soo_weather_mini>li
 	border-left: solid 1px #eeeeee;
 	color:#616161;
 }
-ol.soo_weather_mini>li>ul>li.soo_weather_mini_icon
+ol.soo_weather_mini>li li.soo_weather_mini_icon
 {
 	font-size:70px;
 	line-height:90px;
