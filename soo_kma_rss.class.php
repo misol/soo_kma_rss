@@ -17,7 +17,17 @@ class soo_kma_rss extends WidgetHandler
 	function proc($args)
 	{
 		Context::loadLang($this->widget_path.'lang');
+
+		$datas = new stdClass();
 		$datas = $this->getRssItems($args);
+
+		if($args->rss_url2 != '' && isset($args->rss_url2))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url2;
+			$datas->location1 = $datas;
+			$datas->location2 = $this->getRssItems($args2);
+		}
 
 		$output = $this->_compile($args,$datas);
 		return $output;
@@ -118,10 +128,20 @@ class soo_kma_rss extends WidgetHandler
 			}
 		}
 
+		ksort($today);
+		ksort($tomorrow);
+		ksort($after_tomorrow);
+
+		reset($today);
+		$recent = current($today);
+		$recent_time = key($array);
+
 		$output = new stdClass();
 		$output->pubtime = $pub_time;
 		$output->link = $link;
 		$output->data = $datas;
+		$output->recent = $recent;
+		$output->recent_time = $recent_time;
 		$output->today = $today;
 		$output->tomorrow = $tomorrow;
 		$output->after_tomorrow = $after_tomorrow;
@@ -133,6 +153,8 @@ class soo_kma_rss extends WidgetHandler
 		$oTemplate = &TemplateHandler::getInstance();
 
 		Context::set('location', $args->location);
+		Context::set('location1', $args->location); //Alias of location(for dual location weather)
+		Context::set('location2', $args->location2);
 		Context::set('datas', $datas);
 
 		$tpl_path = sprintf('%sskins/%s', $this->widget_path, $args->skin);

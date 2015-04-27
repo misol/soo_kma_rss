@@ -1,0 +1,140 @@
+div.soo_weather_m,ol.soo_weather_m, ol.soo_weather_m>li>a, ol.soo_weather_m>li>a>ul
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	height:136px;
+}
+ol.soo_weather_m ul, ol.soo_weather_m li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+ol.soo_weather_m>li>a
+{
+	width:50%;
+	box-sizing: border-box;
+	float:left;
+	overflow:hidden;
+	margin-left:-1px;
+	border-left: solid 1px #eeeeee;
+	color:#616161;
+}
+ol.soo_weather_m>li>a li
+{
+	width:50%;
+	float:left;
+	box-sizing: border-box;
+}
+ol.soo_weather_m>li>a li.soo_weather_m_icon
+{
+	font-size:70px;
+	line-height:90px;
+	height:86px;
+	overflow:hidden;
+	box-sizing: border-box;
+	text-align: center;
+}
+ol.soo_weather_m>li>a:first-child
+{
+	border-left: none;
+	margin-left:0;
+}
+ol.soo_weather_m>li>a>ul>li.text
+{
+	display:block;
+	font-size:11px;
+	line-height:14px;
+	margin-top:7px;
+	padding:3px 0;
+	box-sizing: border-box;
+	height:24px;
+	text-align: left;
+}
+ol.soo_weather_m>li>a>ul>li.soo_location
+{
+	width:100%;
+	box-sizing: border-box;
+	text-align: center;
+	height:25px;
+	font-size:16px;
+	line-height:19px;
+	margin:0px;
+}
+ol.soo_weather_m>li>a  .soo_text_hide
+{
+	font-size:0px;
+	text-indent:-1000pt;
+}
+ol.soo_weather_m,ol.soo_weather_m:after
+{
+	clear:both;
+}
+ol.soo_weather_m:after
+{
+	content:" ";
+}
+div.soo_weather_m>address
+{
+	position:relative;
+	display:block;
+	font-style:normal;
+	font-size:12px;
+	float:right;
+}
+h3.soo_weather>a
+{
+	float:right;
+}
+@media screen and (max-width: 600px) {
+	ol.soo_weather_m>li>a>ul>li.text
+	{
+		font-size:10px;
+		line-height:14px;
+		height:20px;
+		margin-top:3px;
+		padding:2px 0;
+	}
+	div.soo_weather_m,ol.soo_weather_m, ol.soo_weather_m>li>a, ol.soo_weather_m>li>a>ul
+	{
+		height:90px;
+	}
+	ol.soo_weather_m>li>a li.soo_weather_m_icon
+	{
+		font-size:45px;
+		line-height:50px;
+		margin:0px;
+		height:60px;
+		overflow:hidden;
+		padding:5px 0;
+	}
+	ol.soo_weather_m>li>a>ul>li.soo_location
+	{
+		font-size:12px;
+		line-height:15px;
+		margin:0px;
+	}
+}
+@media screen and (max-width: 400px) {
+	ol.soo_weather_m>li>a>ul>li.text
+	{
+		margin-top:0;
+		padding:2px 0;
+	}
+	div.soo_weather_m,ol.soo_weather_m, ol.soo_weather_m>li>a, ol.soo_weather_m>li>a>ul
+	{
+		height:80px;
+	}
+	ol.soo_weather_m>li>a li.soo_weather_m_icon
+	{
+		font-size:30px;
+		line-height:50px;
+		margin:0px;
+		height:60px;
+		overflow:hidden;
+		padding:3px 0;
+	}
+}

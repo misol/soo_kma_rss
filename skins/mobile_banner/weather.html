@@ -1,0 +1,81 @@
+<!--@if(version_compare(__XE_VERSION__, '1.8.0', '<'))-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
+<!--@else-->
+	<load target="./../../../../common/xeicon/xeicon.min.css" />
+<!--@end-->
+<!--%import("css/css.css")-->
+<div class="soo_weather_m">
+	<ol class="soo_weather_m">
+		<li>
+			<a href="{$datas->location1->link}" onclick="window.open(this.href);return false">
+				<ul>
+					<li class="soo_location text"><i class="xi-compass"></i> {$location1}</li>
+					<li class="soo_weather_m_icon">
+					<block cond="$datas->location1->recent->pty->body == 0">
+						<block cond="$datas->location1->recent->sky->body == 1">
+							<i class="xi-sun" title="{$lang->sky_lang[1]}" cond="$time < 20"></i><i class="xi-night" title="{$lang->sky_lang[1]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
+						</block>
+						<block cond="$datas->location1->recent->sky->body == 2">
+							<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}" cond="$time < 20"></i><i class="xi-cloudy-night" title="{$lang->sky_lang[2]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
+						</block>
+						<block cond="$datas->location1->recent->sky->body == 3">
+							<i class="xi-cloudy" title="{$lang->sky_lang[3]}"></i><span class="soo_text_hide">{$lang->sky_lang[3]}</span>
+						</block>
+						<block cond="$datas->location1->recent->sky->body == 4">
+							<i class="xi-cloudiness" title="{$lang->sky_lang[4]}"></i><span class="soo_text_hide">{$lang->sky_lang[4]}</span>
+						</block>
+					</block>
+					<block cond="$datas->location1->recent->pty->body == 1">
+						<i class="xi-rain" title="{$lang->rain_lang[1]}"></i><span class="soo_text_hide">{$lang->rain_lang[1]}</span>
+					</block>
+					<block cond="$datas->location1->recent->pty->body == 2">
+						<i class="xi-heavy-snow" title="{$lang->rain_lang[2]}"></i><span class="soo_text_hide">{$lang->rain_lang[2]}</span>
+					</block>
+					<block cond="$datas->location1->recent->pty->body == 3">
+						<i class="xi-snow" title="{$lang->rain_lang[3]}"></i><span class="soo_text_hide">{$lang->rain_lang[3]}</span>
+					</block>
+					</li>
+					<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->location1->recent->temp->body}°C</li>
+					<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->location1->recent->reh->body}%</li>
+					<li class="soo_p_rain text" title="{$lang->soo_p_rain}"><i class="xi-umbrella"></i> {$datas->location1->recent->pop->body}%</li>
+				</ul>
+			</a>
+		</li>
+		<li>
+			<a href="{$datas->location2->link}" onclick="window.open(this.href);return false">
+				<ul>
+					<li class="soo_location text"><i class="xi-compass"></i> {$location2}</li>
+					<li class="soo_weather_m_icon">
+					<block cond="$datas->location2->recent->pty->body == 0">
+						<block cond="$datas->location2->recent->sky->body == 1">
+							<i class="xi-sun" title="{$lang->sky_lang[1]}" cond="$time < 20"></i><i class="xi-night" title="{$lang->sky_lang[1]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
+						</block>
+						<block cond="$datas->location2->recent->sky->body == 2">
+							<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}" cond="$time < 20"></i><i class="xi-cloudy-night" title="{$lang->sky_lang[2]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
+						</block>
+						<block cond="$datas->location2->recent->sky->body == 3">
+							<i class="xi-cloudy" title="{$lang->sky_lang[3]}"></i><span class="soo_text_hide">{$lang->sky_lang[3]}</span>
+						</block>
+						<block cond="$datas->location2->recent->sky->body == 4">
+							<i class="xi-cloudiness" title="{$lang->sky_lang[4]}"></i><span class="soo_text_hide">{$lang->sky_lang[4]}</span>
+						</block>
+					</block>
+					<block cond="$datas->location2->recent->pty->body == 1">
+						<i class="xi-rain" title="{$lang->rain_lang[1]}"></i><span class="soo_text_hide">{$lang->rain_lang[1]}</span>
+					</block>
+					<block cond="$datas->location2->recent->pty->body == 2">
+						<i class="xi-heavy-snow" title="{$lang->rain_lang[2]}"></i><span class="soo_text_hide">{$lang->rain_lang[2]}</span>
+					</block>
+					<block cond="$datas->location2->recent->pty->body == 3">
+						<i class="xi-snow" title="{$lang->rain_lang[3]}"></i><span class="soo_text_hide">{$lang->rain_lang[3]}</span>
+					</block>
+					</li>
+					<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->location2->recent->temp->body}°C</li>
+					<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->location2->recent->reh->body}%</li>
+					<li class="soo_p_rain text" title="{$lang->soo_p_rain}"><i class="xi-umbrella"></i> {$datas->location2->recent->pop->body}%</li>
+				</ul>
+			</a>
+		</li>
+	</ol>
+	<address>{$lang->soo_copyright}: <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address>
+</div>
