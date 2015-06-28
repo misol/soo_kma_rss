@@ -1,0 +1,149 @@
+/* 앱 전체 스타일 */
+.misolWeather
+{
+	background-color:#ffffff;
+	font-family: "맑은 고딕", "Apple SD Gothic Neo","나눔고딕",NanumGothic,'Nanum Gothic',"돋움",Dotum,"굴림",Gulim,Helvetica,sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+	margin: 8px 0px;
+	padding: 0 15px;
+}
+/* 상단 탭 스타일 */
+.misolWeather  ul.misolWeatherTabA {
+	list-style: outside none none;
+	padding: 0px 0px 6px;
+	margin: 0;
+}
+.misolWeather div.misolTab{
+	overflow: hidden;
+	width:100%;
+	height: 52px;
+	white-space: nowrap;
+	border-bottom: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+.misolWeather ul.misolWeatherTabA{
+	display: block;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-y:hidden;
+	padding: 6px 0px 100px;
+	text-decoration: none;
+}
+.misolWeather ul.misolWeatherTabA>li {
+	display:inline-block;
+	height: 40px;
+	line-height: 18px;
+	position: relative;
+}
+.misolWeather ul.misolWeatherTabA>li a {
+	display:inline-block;
+	color: #000;
+	font-weight: 400;
+	letter-spacing: -1px;
+	line-height: 40px;
+	text-decoration: none;
+}
+.misolWeather ul.misolWeatherTabA>li a:hover, .misolWeather ul.misolWeatherTabA>li.active a {
+	color: #A50000;
+	font-weight: 700;
+}
+.misolWeather ul.misolWeatherTabA>li a span {
+	border-left: 1px solid #e0e0e0;
+	padding: 0 15px;
+}
+.misolWeather ul.misolWeatherTabA>li:first-child a span {
+	border-left: 0 none;
+	padding-left: 0;
+}
+
+.misolWeather dl.widgetDivider{ margin:0;}
+.misolWeather dl.widgetDivider dt{ position:absolute; width:0; height:0; overflow:hidden; font-size:0; line-height:0;}
+.misolWeather dl.widgetDivider dd{ overflow:hidden; display:none; margin:0;} 
+.widgetContainer .misolWeather .open{ display:block !important;}
+
+div.soo_weather_mini,ol.soo_weather_mini, ol.soo_weather_mini>li
+{
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	height:146px;
+}
+div.soo_weather_mini
+{
+	overflow: hidden;
+	width:100%;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding-top:6px;
+}
+div.soo_weather_mini ol.soo_weather_mini{
+	display: block;
+	list-style: outside none none;
+	padding: 0px 0px 100px;
+	margin: 0;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	overflow-y:hidden;
+}
+ol.soo_weather_mini ul, ol.soo_weather_mini li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ol.soo_weather_mini>li>ul>li,ol.soo_weather_mini>li>ul>li.soo_weather_mini_icon>i
+{
+	box-sizing: border-box;
+	width:100%;
+}
+ol.soo_weather_mini>li
+{
+	display:inline-block;
+	width:64px;
+	min-width:8%;
+	box-sizing: border-box;
+	text-align: center;
+	overflow:hidden;
+	color:#616161;
+	height:140px;
+}
+ol.soo_weather_mini>li li.soo_weather_mini_icon
+{
+	font-size:45px;
+	line-height:47px;
+	height:55px;
+	overflow:hidden;
+	box-sizing: border-box;
+	margin:0px;
+	padding:5px 0;
+}
+ol.soo_weather_mini>li>ul>li.text
+{
+	display:block;
+	font-size:11px;
+	line-height:14px;
+	padding:3px 0;
+	box-sizing: border-box;
+	height:20px;
+}
+ol.soo_weather_mini>li  .soo_text_hide
+{
+	font-size:0px;
+	text-indent:-1000pt;
+}
+.soo_weather_footer
+{
+	color:#5e5e5e;
+	font-size:11px;
+	text-align: center;
+	margin-top:5px;
+	padding-bottom:15px;
+}
+.soo_weather_footer>address
+{
+	display:inline;
+	font-style:normal;
+}

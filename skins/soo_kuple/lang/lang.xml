@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="soo_s06">
+		<value xml:lang="ko"><![CDATA[적설량]]></value>
+		<value xml:lang="en"><![CDATA[Snowfall]]></value>
+	</item>
+	<item name="soo_r06">
+		<value xml:lang="ko"><![CDATA[강수량]]></value>
+		<value xml:lang="en"><![CDATA[Rainfall]]></value>
+	</item>
+</lang>

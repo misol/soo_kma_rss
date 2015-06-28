@@ -1,0 +1,33 @@
+<!--@if(version_compare(__XE_VERSION__, '1.8.0', '<'))-->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/xeicon/1.0.4/xeicon.min.css" />
+<!--@else-->
+	<load target="./../../../../common/xeicon/xeicon.min.css" />
+<!--@end-->
+<load target="./js/content_widget.js" />
+<load target="./css/css.css" />
+<load target="./lang" />
+
+<div class="widgetContainer">
+	<div class="misolWeather">
+		<div class="misolTab">
+			<ul class="misolWeatherTabA widgetTab">
+				<li class="active"><a href="{$datas->location1->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),0)" onclick="this.onmouseover();return false;"><span>{$location1}</span></a></li>
+				<li><a href="{$datas->location2->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),1)" onclick="this.onmouseover();return false;"><span>{$location2}</span></a></li>
+			</ul>
+		</div>
+		{@$datas_orginal = $datas}
+		<dl class="widgetDivider">
+			<dt>{$location1}</dt>
+			<dd class="open">
+				{@ $datas = $datas_orginal->location1}
+				<!--#include("./normal.html")-->
+			</dd>
+			<dt>{$location2}</dt>
+			<dd>
+				{@ $datas = $datas_orginal->location2}
+				<!--#include("./normal.html")-->
+			</dd>
+		</dl>
+		<div class="soo_weather_footer">{$lang->soo_pubtime}: {date('m/d H:i',$datas->pubtime)}, <address>{$lang->soo_copyright}: <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address></div>
+	</div>
+</div>

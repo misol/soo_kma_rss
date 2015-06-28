@@ -3,8 +3,8 @@
 ## 특징
 
 * 기상청 날씨 RSS를 읽어와서 표시합니다.
-* 기상청 날씨 RSS 주소는 http://web.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 구할 수 있습니다.
-  * 예를 들어서, 서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://web.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.
+* 기상청 날씨 RSS 주소는 http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 구할 수 있습니다.
+  * 예를 들어서, 서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.
 * 기상청 단기 예보는 3시간 마다 발표 되기 때문에 기본적으로 30분간 RSS 내용이 캐싱됩니다. 위젯 캐시를 통해서 그 이상의 시간으로 설정하실 수 있습니다.
 
 ## 필수사항
