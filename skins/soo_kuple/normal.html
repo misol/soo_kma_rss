@@ -4,7 +4,7 @@
 		<block loop="$time_arr=>$key,$time">
 		<li style="soo_weather_today" cond="isset($datas->today[$time])">
 			<ul>
-				<li class="soo_time text"><i class="xi-time"></i> {$time}:00</li>
+				<li class="soo_time text"><i class="xi-time"></i> <time datetime="{date('Y-m-d\TH:i\+09:00',strtotime (date('Y-m-d',$datas->pubtime) . $time .':00' ))}">{$time}:00</time></li>
 				<li class="soo_weather_mini_icon">
 				<block cond="$datas->today[$time]->pty->body == 0">
 					<block cond="$datas->today[$time]->sky->body == 1">
@@ -32,14 +32,14 @@
 				</li>
 				<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->today[$time]->temp->body}°C</li>
 				<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->today[$time]->reh->body}%</li>
-				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->today[$time]->pty->body != 1 && $datas->today[$time]->pty->body != 2" title="{$lang->soo_s06}"|cond="$datas->today[$time]->pty->body == 2" title="{$lang->soo_r06}"|cond="$datas->today[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->today[$time]->pty->body == 1">{intval(round($datas->today[$time]->r06->body,0))}mm</block><block cond="$datas->today[$time]->pty->body == 2">{intval(round($datas->today[$time]->s06->body,0))}mm</block><block cond="$datas->today[$time]->pty->body != 1 && $datas->today[$time]->pty->body != 2">{$datas->today[$time]->pop->body}%</block></li>
+				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->today[$time]->pty->body != 1 && $datas->today[$time]->pty->body != 2 && $datas->today[$time]->pty->body != 3" title="{$lang->soo_s06}"|cond="$datas->today[$time]->pty->body == 2 || $datas->today[$time]->pty->body == 3" title="{$lang->soo_r06}"|cond="$datas->today[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->today[$time]->pty->body == 1">{intval(round($datas->today[$time]->r06->body,0))}mm</block><block cond="$datas->today[$time]->pty->body == 2 || $datas->today[$time]->pty->body == 3">{intval(round($datas->today[$time]->s06->body,0))}mm</block><block cond="$datas->today[$time]->pty->body != 1 && $datas->today[$time]->pty->body != 2 && $datas->today[$time]->pty->body != 3">{$datas->today[$time]->pop->body}%</block></li>
 			</ul>
 		</li>
 		</block>
 		<block loop="$time_arr=>$key,$time">
 		<li cond="isset($datas->tomorrow[$time])">
 			<ul>
-				<li class="soo_time text"><i class="xi-time"></i> {$time}:00</li>
+				<li class="soo_time text"><i class="xi-time"></i> <time datetime="{date('Y-m-d\TH:i\+09:00',strtotime (date('Y-m-d',$datas->pubtime + 86400) . $time .':00' ))}">{$time}:00</time></li>
 				<li class="soo_weather_mini_icon">
 				<block cond="$datas->tomorrow[$time]->pty->body == 0">
 					<block cond="$datas->tomorrow[$time]->sky->body == 1">
@@ -67,14 +67,14 @@
 				</li>
 				<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->tomorrow[$time]->temp->body}°C</li>
 				<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->tomorrow[$time]->reh->body}%</li>
-				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->tomorrow[$time]->pty->body != 1 && $datas->tomorrow[$time]->pty->body != 2" title="{$lang->soo_s06}"|cond="$datas->tomorrow[$time]->pty->body == 2" title="{$lang->soo_r06}"|cond="$datas->tomorrow[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->tomorrow[$time]->pty->body == 1">{intval(round($datas->tomorrow[$time]->r06->body,0))}mm</block><block cond="$datas->tomorrow[$time]->pty->body == 2">{intval(round($datas->tomorrow[$time]->s06->body,0))}mm</block><block cond="$datas->tomorrow[$time]->pty->body != 1 && $datas->tomorrow[$time]->pty->body != 2">{$datas->tomorrow[$time]->pop->body}%</block></li>
+				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->tomorrow[$time]->pty->body != 1 && $datas->tomorrow[$time]->pty->body != 2 && $datas->tomorrow[$time]->pty->body != 3" title="{$lang->soo_s06}"|cond="$datas->tomorrow[$time]->pty->body == 2 || $datas->tomorrow[$time]->pty->body == 3" title="{$lang->soo_r06}"|cond="$datas->tomorrow[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->tomorrow[$time]->pty->body == 1">{intval(round($datas->tomorrow[$time]->r06->body,0))}mm</block><block cond="$datas->tomorrow[$time]->pty->body == 2 || $datas->tomorrow[$time]->pty->body == 3">{intval(round($datas->tomorrow[$time]->s06->body,0))}mm</block><block cond="$datas->tomorrow[$time]->pty->body != 1 && $datas->tomorrow[$time]->pty->body != 2 && $datas->tomorrow[$time]->pty->body != 3">{$datas->tomorrow[$time]->pop->body}%</block></li>
 			</ul>
 		</li>
 		</block>
 		<block loop="$time_arr=>$key,$time">
 		<li cond="isset($datas->after_tomorrow[$time])">
 			<ul>
-				<li class="soo_time text"><i class="xi-time"></i> {$time}:00</li>
+				<li class="soo_time text"><i class="xi-time"></i> <time datetime="{date('Y-m-d\TH:i\+09:00',strtotime (date('Y-m-d',$datas->pubtime + 172800) . $time .':00' ))}">{$time}:00</time></li>
 				<li class="soo_weather_mini_icon">
 				<block cond="$datas->after_tomorrow[$time]->pty->body == 0">
 					<block cond="$datas->after_tomorrow[$time]->sky->body == 1">
@@ -102,7 +102,7 @@
 				</li>
 				<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->after_tomorrow[$time]->temp->body}°C</li>
 				<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->after_tomorrow[$time]->reh->body}%</li>
-				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->after_tomorrow[$time]->pty->body != 1 && $datas->after_tomorrow[$time]->pty->body != 2" title="{$lang->soo_s06}"|cond="$datas->after_tomorrow[$time]->pty->body == 2" title="{$lang->soo_r06}"|cond="$datas->after_tomorrow[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->after_tomorrow[$time]->pty->body == 1">{intval(round($datas->after_tomorrow[$time]->r06->body,0))}mm</block><block cond="$datas->after_tomorrow[$time]->pty->body == 2">{intval(round($datas->after_tomorrow[$time]->s06->body,0))}mm</block><block cond="$datas->after_tomorrow[$time]->pty->body != 1 && $datas->after_tomorrow[$time]->pty->body != 2">{$datas->after_tomorrow[$time]->pop->body}%</block></li>
+				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"|cond="$datas->after_tomorrow[$time]->pty->body != 1 && $datas->after_tomorrow[$time]->pty->body != 2 && $datas->after_tomorrow[$time]->pty->body != 3" title="{$lang->soo_s06}"|cond="$datas->after_tomorrow[$time]->pty->body == 2 || $datas->after_tomorrow[$time]->pty->body == 3" title="{$lang->soo_r06}"|cond="$datas->after_tomorrow[$time]->pty->body == 1"><i class="xi-umbrella"></i> <block cond="$datas->after_tomorrow[$time]->pty->body == 1">{intval(round($datas->after_tomorrow[$time]->r06->body,0))}mm</block><block cond="$datas->after_tomorrow[$time]->pty->body == 2 || $datas->after_tomorrow[$time]->pty->body == 3">{intval(round($datas->after_tomorrow[$time]->s06->body,0))}mm</block><block cond="$datas->after_tomorrow[$time]->pty->body != 1 && $datas->after_tomorrow[$time]->pty->body != 2 && $datas->after_tomorrow[$time]->pty->body != 3">{$datas->after_tomorrow[$time]->pop->body}%</block></li>
 			</ul>
 		</li>
 		</block>

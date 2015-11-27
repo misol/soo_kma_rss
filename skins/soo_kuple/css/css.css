@@ -59,7 +59,7 @@
 }
 
 .misolWeather dl.widgetDivider{ margin:0;}
-.misolWeather dl.widgetDivider dt{ position:absolute; width:0; height:0; overflow:hidden; font-size:0; line-height:0;}
+.widgetContainer h1.soo_weather_title,.misolWeather dl.widgetDivider dt{ position:absolute; width:0; height:0; overflow:hidden; font-size:0; line-height:0;}
 .misolWeather dl.widgetDivider dd{ overflow:hidden; display:none; margin:0;} 
 .widgetContainer .misolWeather .open{ display:block !important;}
 
@@ -103,7 +103,7 @@ ol.soo_weather_mini>li
 {
 	display:inline-block;
 	width:64px;
-	min-width:8%;
+	min-width:8.6%;
 	box-sizing: border-box;
 	text-align: center;
 	overflow:hidden;
@@ -134,15 +134,16 @@ ol.soo_weather_mini>li  .soo_text_hide
 	font-size:0px;
 	text-indent:-1000pt;
 }
-.soo_weather_footer
+footer.soo_weather_footer,footer.soo_weather_footer a
 {
 	color:#5e5e5e;
 	font-size:11px;
 	text-align: center;
 	margin-top:5px;
 	padding-bottom:15px;
+	text-decoration:none;
 }
-.soo_weather_footer>address
+footer.soo_weather_footer>address
 {
 	display:inline;
 	font-style:normal;
