@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skin version="0.2">
 	<title xml:lang="ko">기상청 날씨 위젯 쿠플존 스킨</title>
-	<description xml:lang="ko">기상청 날씨 위젯 쿠플존 스킨 입니다.</description>
-	<version>0.1</version>
-	<date>2015-06-28</date>
+	<title xml:lang="en">KMA weather widget for Kuple</title>
+	<description xml:lang="ko">기상청 날씨 위젯 쿠플존 스킨 입니다. 쿠플존(kuple.kr)은 고려대학교 세종캠퍼스의 온라인 커뮤니티 사이트입니다.</description>
+	<description xml:lang="en">Korean weather widget for Kuple.kr. Kuple.kr is an online community of Korea University Sejong Campus.</description>
+	<version>0.2</version>
+	<date>2015-11-27</date>
 	<link>https://github.com/misol</link>
+	<license>MIT</license>
 	<author email_address="misol.kr@gmail.com" link="https://github.com/misol">
-		<name xml:lang="ko">김민수(misol)</name>
-		<name xml:lang="en">misol</name>
+		<name xml:lang="ko">김민수 (misol)</name>
+		<name xml:lang="en">MinSoo Kim (misol)</name>
 	</author>
 </skin>

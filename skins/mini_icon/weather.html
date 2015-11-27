@@ -5,43 +5,45 @@
 <!--@end-->
 
 <!--%import("css/css.css")-->
-<h3 class="soo_weather"><i class="xi-sunset"></i> {$location} {$lang->soo_tomorrow}({intval(date('m',$datas->pubtime))}/{intval(date('d',$datas->pubtime))+1}) {$lang->soo_weather} <a href="{$datas->link}" onclick="window.open(this.href);return false">{$lang->detail_view}</a></h3>
-{@$time_arr = array(6,9,12,15,18,21,24)}
-<div class="soo_weather_mini">
-	<ol class="soo_weather_mini">
-		<li loop="$time_arr=>$key,$time">
-			<ul>
-				<li class="soo_time text"><i class="xi-time"></i> {$time}:00</li>
-				<li class="soo_weather_mini_icon">
-				<block cond="$datas->tomorrow[$time]->pty->body == 0">
-					<block cond="$datas->tomorrow[$time]->sky->body == 1">
-						<i class="xi-sun" title="{$lang->sky_lang[1]}" cond="$time < 20"></i><i class="xi-night" title="{$lang->sky_lang[1]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
+<section>
+	<h1 class="soo_weather"><i class="xi-sunset"></i> {$location} {$lang->soo_tomorrow}({intval(date('m',$datas->pubtime))}/{intval(date('d',$datas->pubtime))+1}) {$lang->soo_weather} <a href="{$datas->link}" onclick="window.open(this.href);return false">{$lang->detail_view}</a></h1>
+	{@$time_arr = array(6,9,12,15,18,21,24)}
+	<div class="soo_weather_mini">
+		<ol class="soo_weather_mini">
+			<li loop="$time_arr=>$key,$time">
+				<ul>
+					<li class="soo_time text"><i class="xi-time"></i> {$time}:00</li>
+					<li class="soo_weather_mini_icon">
+					<block cond="$datas->tomorrow[$time]->pty->body == 0">
+						<block cond="$datas->tomorrow[$time]->sky->body == 1">
+							<i class="xi-sun" title="{$lang->sky_lang[1]}" cond="$time < 20"></i><i class="xi-night" title="{$lang->sky_lang[1]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[1]}</span>
+						</block>
+						<block cond="$datas->tomorrow[$time]->sky->body == 2">
+							<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}" cond="$time < 20"></i><i class="xi-cloudy-night" title="{$lang->sky_lang[2]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
+						</block>
+						<block cond="$datas->tomorrow[$time]->sky->body == 3">
+							<i class="xi-cloudy" title="{$lang->sky_lang[3]}"></i><span class="soo_text_hide">{$lang->sky_lang[3]}</span>
+						</block>
+						<block cond="$datas->tomorrow[$time]->sky->body == 4">
+							<i class="xi-cloudiness" title="{$lang->sky_lang[4]}"></i><span class="soo_text_hide">{$lang->sky_lang[4]}</span>
+						</block>
 					</block>
-					<block cond="$datas->tomorrow[$time]->sky->body == 2">
-						<i class="xi-partly-cloudy" title="{$lang->sky_lang[2]}" cond="$time < 20"></i><i class="xi-cloudy-night" title="{$lang->sky_lang[2]}" cond="$time >= 20"></i><span class="soo_text_hide">{$lang->sky_lang[2]}</span>
+					<block cond="$datas->tomorrow[$time]->pty->body == 1">
+						<i class="xi-rain" title="{$lang->rain_lang[1]}"></i><span class="soo_text_hide">{$lang->rain_lang[1]}</span>
 					</block>
-					<block cond="$datas->tomorrow[$time]->sky->body == 3">
-						<i class="xi-cloudy" title="{$lang->sky_lang[3]}"></i><span class="soo_text_hide">{$lang->sky_lang[3]}</span>
+					<block cond="$datas->tomorrow[$time]->pty->body == 2">
+						<i class="xi-heavy-snow" title="{$lang->rain_lang[2]}"></i><span class="soo_text_hide">{$lang->rain_lang[2]}</span>
 					</block>
-					<block cond="$datas->tomorrow[$time]->sky->body == 4">
-						<i class="xi-cloudiness" title="{$lang->sky_lang[4]}"></i><span class="soo_text_hide">{$lang->sky_lang[4]}</span>
+					<block cond="$datas->tomorrow[$time]->pty->body == 3">
+						<i class="xi-snow" title="{$lang->rain_lang[3]}"></i><span class="soo_text_hide">{$lang->rain_lang[3]}</span>
 					</block>
-				</block>
-				<block cond="$datas->tomorrow[$time]->pty->body == 1">
-					<i class="xi-rain" title="{$lang->rain_lang[1]}"></i><span class="soo_text_hide">{$lang->rain_lang[1]}</span>
-				</block>
-				<block cond="$datas->tomorrow[$time]->pty->body == 2">
-					<i class="xi-heavy-snow" title="{$lang->rain_lang[2]}"></i><span class="soo_text_hide">{$lang->rain_lang[2]}</span>
-				</block>
-				<block cond="$datas->tomorrow[$time]->pty->body == 3">
-					<i class="xi-snow" title="{$lang->rain_lang[3]}"></i><span class="soo_text_hide">{$lang->rain_lang[3]}</span>
-				</block>
-				</li>
-				<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->tomorrow[$time]->temp->body}°C</li>
-				<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->tomorrow[$time]->reh->body}%</li>
-				<li class="soo_p_rain text" title="{$lang->soo_p_rain}"><i class="xi-umbrella"></i> {$datas->tomorrow[$time]->pop->body}%</li>
-			</ul>
-		</li>
-	</ol>
-</div>
-<div class="soo_weather_footer">{$lang->soo_pubtime}: {date('m/d H:i',$datas->pubtime)}, <address>{$lang->soo_copyright}: <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address></div>
+					</li>
+					<li class="soo_temperature text" title="{$lang->soo_temperature}"><i class="xi-warm"></i> {$datas->tomorrow[$time]->temp->body}°C</li>
+					<li class="soo_humidity text" title="{$lang->soo_humidity}"><i class="xi-humidity"></i> {$datas->tomorrow[$time]->reh->body}%</li>
+					<li class="soo_p_rain text" title="{$lang->soo_p_rain}"><i class="xi-umbrella"></i> {$datas->tomorrow[$time]->pop->body}%</li>
+				</ul>
+			</li>
+		</ol>
+	</div>
+	<footer class="soo_weather_footer">{$lang->soo_pubtime}: <time datetime="{date('Y-m-d\TH:i\+09:00',$datas->pubtime)}">{date('m/d H:i',$datas->pubtime)}</time>, <address>{$lang->soo_copyright} &copy; <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address></footer>
+</section>

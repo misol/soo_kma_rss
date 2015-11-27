@@ -64,7 +64,7 @@ ol.soo_weather_mini:after
 {
 	content:" ";
 }
-.soo_weather_footer
+footer.soo_weather_footer
 {
 	color:#5e5e5e;
 	font-size:11px;
@@ -72,7 +72,7 @@ ol.soo_weather_mini:after
 	margin:5px 0;
 	padding:5px;
 }
-.soo_weather_footer>address
+footer.soo_weather_footer>address
 {
 	display:inline;
 	font-style:normal;
