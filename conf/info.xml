@@ -4,8 +4,8 @@
 	<title xml:lang="en">Korean Weather Widget</title>
 	<description xml:lang="ko">기상청의 날씨 RSS를 읽어옵니다.</description>
 	<description xml:lang="en">Read weather RSS of KMA.</description>
-	<version>0.2.1</version>
-	<date>2015-06-28</date>
+	<version>0.3</version>
+	<date>2015-12-03</date>
 	<author email_address="misol.kr@gmail.com" link="https://github.com/misol">
 		<name xml:lang="ko">김민수</name>
 		<name xml:lang="en">MinSoo Kim</name>
@@ -13,8 +13,8 @@
 	<license>MIT License</license>
 	<extra_vars>
 		<group>
-			<title xml:lang="ko">날씨 RSS 설정</title>
-			<title xml:lang="en">Weather RSS Settings</title>
+			<title xml:lang="ko">날씨 RSS 설정1</title>
+			<title xml:lang="en">Weather RSS Settings1</title>
 			<var id="location" type="text">
 				<name xml:lang="ko">지역명</name>
 				<name xml:lang="en">Location name</name>
@@ -31,19 +31,19 @@
 				Click RSS button after that, and you will get the RSS URL.
 				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
 			</var>
-	   </group>
+		</group>
 		<group>
 			<title xml:lang="ko">날씨 RSS 설정2</title>
 			<title xml:lang="en">Weather RSS Settings2</title>
 			<var id="location2" type="text">
-				<name xml:lang="ko">지역명2</name>
-				<name xml:lang="en">Location name2</name>
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
 				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
 				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
 			</var>
 			<var id="rss_url2" type="text">
-				<name xml:lang="ko">날씨 RSS 주소2</name>
-				<name xml:lang="en">Weather RSS URL2</name>
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
 				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
 				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
 				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
@@ -51,6 +51,166 @@
 				Click RSS button after that, and you will get the RSS URL.
 				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
 			</var>
-	   </group>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정3</title>
+			<title xml:lang="en">Weather RSS Settings3</title>
+			<var id="location3" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url3" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정4</title>
+			<title xml:lang="en">Weather RSS Settings4</title>
+			<var id="location4" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url4" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정5</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location5" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url5" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정6</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location6" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url6" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정7</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location7" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url7" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정8</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location8" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url8" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정9</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location9" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url9" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">날씨 RSS 설정10</title>
+			<title xml:lang="en">Weather RSS Settings5</title>
+			<var id="location10" type="text">
+				<name xml:lang="ko">지역명</name>
+				<name xml:lang="en">Location name</name>
+				<description xml:lang="ko"><![CDATA[RSS 주소가 알려주고 있는 날씨의 지리적인 지역명을 입력합니다. 위젯 스킨이 두 번째 RSS 지역까지 지원할 경우만 가능합니다.]]></description>
+				<description xml:lang="en"><![CDATA[Geological location, the contents of the RSS pointing.]]></description>
+			</var>
+			<var id="rss_url10" type="text">
+				<name xml:lang="ko">날씨 RSS 주소</name>
+				<name xml:lang="en">Weather RSS URL</name>
+				<description xml:lang="ko"><![CDATA[기상청 날씨 RSS 주소를 입력합니다. http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 에서 동네예보>시간별 예보 항목에서 지역을 선택한 후, RSS 버튼을 누르면 RSS 주소를 구할 수 있습니다.
+				서울특별시 동작구 신대방제2동의 날씨 RSS 주소는 http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 입니다.]]></description>
+				<description xml:lang="en"><![CDATA[RSS URL, provided by Korea Meteorological Administration.
+				To get the URL, go to http://www.kma.go.kr/weather/lifenindustry/sevice_rss.jsp 동네예보>시간별 예보 and select the geological location that you want.
+				Click RSS button after that, and you will get the RSS URL.
+				For example the weather RSS URL for Sindaebang 2-dong, Dongjak-gu, Seoul, Korea is http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1159068000 .]]></description>
+			</var>
+		</group>
 	</extra_vars>
 </widget>

@@ -21,12 +21,70 @@ class soo_kma_rss extends WidgetHandler
 		$datas = new stdClass();
 		$datas = $this->getRssItems($args);
 
+		// location1 = datas
+		$datas->location1 = $datas;
+
 		if($args->rss_url2 != '' && isset($args->rss_url2))
 		{
 			$args2 = new stdClass();
 			$args2->rss_url = $args->rss_url2;
-			$datas->location1 = $datas;
 			$datas->location2 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url3 != '' && isset($args->rss_url3))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url3;
+			$datas->location3 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url4 != '' && isset($args->rss_url4))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url4;
+			$datas->location4 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url5 != '' && isset($args->rss_url5))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url5;
+			$datas->location5 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url6 != '' && isset($args->rss_url6))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url6;
+			$datas->location6 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url7 != '' && isset($args->rss_url7))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url7;
+			$datas->location7 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url8 != '' && isset($args->rss_url8))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url8;
+			$datas->location8 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url9 != '' && isset($args->rss_url9))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url9;
+			$datas->location9 = $this->getRssItems($args2);
+		}
+
+		if($args->rss_url10 != '' && isset($args->rss_url10))
+		{
+			$args2 = new stdClass();
+			$args2->rss_url = $args->rss_url10;
+			$datas->location10 = $this->getRssItems($args2);
 		}
 
 		$output = $this->_compile($args,$datas);
@@ -152,6 +210,7 @@ class soo_kma_rss extends WidgetHandler
 	{
 		$oTemplate = &TemplateHandler::getInstance();
 
+		Context::set('args', $args);
 		Context::set('location', $args->location);
 		Context::set('location1', $args->location); //Alias of location(for dual location weather)
 		Context::set('location2', $args->location2);
