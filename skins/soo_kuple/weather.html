@@ -7,93 +7,36 @@
 <load target="./css/css.css" />
 <load target="./lang" />
 {@$datas_orginal = $datas}
-
+{@$location_array = $datas->location_array}
 <section class="widgetContainer">
 	<h1 class="soo_weather_title">{$lang->soo_weather}</h1>
 	<div class="misolWeather">
 		<div class="misolTab" cond="trim($datas_orginal->location2->link) != ''">
 			<ul class="misolWeatherTabA widgetTab">
-				<li class="active"><a href="{$datas->location1->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),0)" onclick="this.onmouseover();return false;"><span>{$location1}</span></a></li>
-				<li><a href="{$datas->location2->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),1)" onclick="this.onmouseover();return false;"><span>{$location2}</span></a></li>
-				<li cond="$datas->location3->link"><a href="{$datas->location3->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),2)" onclick="this.onmouseover();return false;"><span>{$args->location3}</span></a></li>
-				<li cond="$datas->location4->link"><a href="{$datas->location4->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),3)" onclick="this.onmouseover();return false;"><span>{$args->location4}</span></a></li>
-				<li cond="$datas->location5->link"><a href="{$datas->location5->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),4)" onclick="this.onmouseover();return false;"><span>{$args->location5}</span></a></li>
-				<li cond="$datas->location6->link"><a href="{$datas->location6->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),5)" onclick="this.onmouseover();return false;"><span>{$args->location6}</span></a></li>
-				<li cond="$datas->location7->link"><a href="{$datas->location7->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),6)" onclick="this.onmouseover();return false;"><span>{$args->location7}</span></a></li>
-				<li cond="$datas->location8->link"><a href="{$datas->location8->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),7)" onclick="this.onmouseover();return false;"><span>{$args->location8}</span></a></li>
-				<li cond="$datas->location9->link"><a href="{$datas->location9->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),8)" onclick="this.onmouseover();return false;"><span>{$args->location9}</span></a></li>
-				<li cond="$datas->location10->link"><a href="{$datas->location10->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),9)" onclick="this.onmouseover();return false;"><span>{$args->location10}</span></a></li>
+				{@$point_n = 0}
+				<block loop="$location_array=>$point_key,$point_data" cond="$point_data->data->link">
+					<li class="active"|cond="$point_n == 0"><a href="{$point_data->data->link}" onmouseover="content_widget_tab_show(jQuery(this),jQuery(this).parents('div.misolTab').next('dl.widgetDivider'),{$point_n})" onclick="this.onmouseover();return false;"><span>{$point_data->name}</span></a>{@$point_n++}</li>
+				</block>
+				
 			</ul>
 		</div>
 		<div class="misolTop" cond="trim($datas_orginal->location2->link) == ''">
 			<a href="{$datas->location1->link}" onclick="window.open(this.href);return false;" class="misol_top_a"><h2>{$location1}</h2><span class="misol_more"><i class="xi-angle-right" title="{$lang->detail_view}"></i></span></a>
 		</div>
 		<dl class="widgetDivider" cond="trim($datas_orginal->location2->link) != ''">
-			<dt>{$location1}</dt>
-			<dd class="open">
-				{@ $datas = $datas_orginal->location1}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$location2}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location2}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location3}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location3}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location4}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location4}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location5}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location5}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location6}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location6}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location7}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location7}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location8}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location8}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location9}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location9}
-				<!--#include("./normal.html")-->
-			</dd>
-
-			<dt>{$args->location10}</dt>
-			<dd>
-				{@ $datas = $datas_orginal->location10}
-				<!--#include("./normal.html")-->
-			</dd>
-
+			{@$point_n2 = 0}
+			<block loop="$location_array=>$point_key,$point_data" cond="$point_data->data->link">
+				<dt>{$point_data->name}</dt>
+				<dd class="open"|cond="$point_n2 == 0">
+					{@ $datas = $point_data->data}
+					<!--#include("./normal.html")-->
+				</dd>{@$point_n2++}
+			</block>
 		</dl>
 		<div cond="trim($datas_orginal->location2->link) == ''">
 			{@ $datas = $datas_orginal->location1}
 			<!--#include("./normal.html")-->
 		</div>
-		<footer class="soo_weather_footer">{$lang->soo_pubtime}: <time datetime="{date('Y-m-d\TH:i\+09:00',$datas->pubtime)}">{date('m/d H:i',$datas->pubtime)}</time>, <address>{$lang->soo_copyright} &copy; <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address></footer>
+		<footer class="soo_weather_footer">{$lang->soo_pubtime}: <time datetime="{date('Y-m-d\TH:i\+09:00',$datas_orginal->pubtime)}">{date('m/d H:i',$datas_orginal->pubtime)}</time>, <address>{$lang->soo_copyright} &copy; <a href="http://www.kma.go.kr" onclick="window.open(this.href);return false">{$lang->soo_kma}</a></address></footer>
 	</div>
 </section>

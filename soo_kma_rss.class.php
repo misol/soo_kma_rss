@@ -20,9 +20,12 @@ class soo_kma_rss extends WidgetHandler
 
 		$datas = new stdClass();
 		$datas = $this->getRssItems($args);
+		$datas->location_array = array();
 
 		// location1 = datas
 		$datas->location1 = $datas;
+		$args->location1 = $args->location;
+		$args->rss_url1 = $args->rss_url;
 
 		if($args->rss_url2 != '' && isset($args->rss_url2))
 		{
@@ -31,60 +34,19 @@ class soo_kma_rss extends WidgetHandler
 			$datas->location2 = $this->getRssItems($args2);
 		}
 
-		if($args->rss_url3 != '' && isset($args->rss_url3))
+		for($location_point = 1; $location_point <= 10; $location_point++)
 		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url3;
-			$datas->location3 = $this->getRssItems($args2);
-		}
+			if($args->rss_url{$location_point} != '' && isset($args->rss_url{$location_point}))
+			{
+				$args2 = new stdClass();
+				$args2->rss_url = $args->{"rss_url". $location_point};
+				$datas->{"location" . $location_point} = $this->getRssItems($args2);
 
-		if($args->rss_url4 != '' && isset($args->rss_url4))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url4;
-			$datas->location4 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url5 != '' && isset($args->rss_url5))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url5;
-			$datas->location5 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url6 != '' && isset($args->rss_url6))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url6;
-			$datas->location6 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url7 != '' && isset($args->rss_url7))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url7;
-			$datas->location7 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url8 != '' && isset($args->rss_url8))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url8;
-			$datas->location8 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url9 != '' && isset($args->rss_url9))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url9;
-			$datas->location9 = $this->getRssItems($args2);
-		}
-
-		if($args->rss_url10 != '' && isset($args->rss_url10))
-		{
-			$args2 = new stdClass();
-			$args2->rss_url = $args->rss_url10;
-			$datas->location10 = $this->getRssItems($args2);
+				$datas->location_array[$location_point] = new stdClass();
+				$datas->location_array[$location_point]->data = $datas->{"location" . $location_point};
+				$datas->location_array[$location_point]->name = trim($args->{"location". $location_point});
+				$datas->location_array[$location_point]->rss_url = trim($args->{"rss_url" . $location_point});
+			}
 		}
 
 		$output = $this->_compile($args,$datas);
