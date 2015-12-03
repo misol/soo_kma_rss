@@ -4,8 +4,8 @@
 	<title xml:lang="en">Korean Weather Widget</title>
 	<description xml:lang="ko">기상청의 날씨 RSS를 읽어옵니다.</description>
 	<description xml:lang="en">Read weather RSS of KMA.</description>
-	<version>0.3</version>
-	<date>2015-12-03</date>
+	<version>0.3.1</version>
+	<date>2015-12-04</date>
 	<author email_address="misol.kr@gmail.com" link="https://github.com/misol">
 		<name xml:lang="ko">김민수</name>
 		<name xml:lang="en">MinSoo Kim</name>
